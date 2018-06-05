@@ -6,10 +6,7 @@
   "homepage": "https://bernabe9.github.io/mc-components",
   "dependencies": {
     "classnames": "^2.2.5",
-    "mc-sass-lib": "https://github.com/jesseocon/mc-sass-lib",
-    "react": "^16.4.0",
-    "react-dom": "^16.4.0",
-    "react-scripts": "1.1.4"
+    "mc-sass-lib": "https://github.com/jesseocon/mc-sass-lib"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -37,6 +34,9 @@
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "2.11.0",
     "eslint-plugin-react": "7.7.0",
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0",
+    "react-scripts": "1.1.4",
     "rimraf": "^2.6.2",
     "sass-loader": "^7.0.1",
     "style-loader": "^0.21.0"
