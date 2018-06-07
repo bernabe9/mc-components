@@ -17,6 +17,7 @@
   top: 0;
   left: 0;
   overflow: scroll;
+  z-index: 999;
 
   &__container {
     max-width: $modal-width;
@@ -86,5 +87,6 @@
 
   &__body--open {
     overflow: hidden;
+    height: 100vh;
   }
 }

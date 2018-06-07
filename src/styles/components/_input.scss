@@ -45,6 +45,20 @@
     &--no-resize {
       resize: none;
     }
+
+    &--disabled {
+      opacity: .5;
+    }
+
+    &[type=text],
+    &[type=password],
+    &[type=file],
+    &[type=search],
+    &[type=tel],
+    &[type=email],
+    &[type=submit] {
+      border-radius: .4rem
+    }
   }
 
   &__label {

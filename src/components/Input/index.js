@@ -12,11 +12,13 @@ export default class Input extends PureComponent {
     fullWidth: bool,
     style: object,
     error: string,
+    disabled: bool,
   }
 
   static defaultProps = {
     type: 'text',
     fullWidth: true,
+    disabled: false,
   }
 
   onChange = ({ target: { value } }) => {
@@ -33,6 +35,7 @@ export default class Input extends PureComponent {
       style,
       fullWidth,
       error,
+      disabled,
       onChange,
       ...props
     } = this.props
@@ -42,6 +45,7 @@ export default class Input extends PureComponent {
       { 'input-field__input--with-label': showLabel },
       { 'input-field__input--full-width': fullWidth },
       { 'input-field__input--error': error },
+      { 'input-field__input--disabled': disabled },
     )
     const labelClassNames = cn(
       'input-field__label',
@@ -61,6 +65,7 @@ export default class Input extends PureComponent {
           value={value}
           type={type}
           placeholder={placeholder}
+          disabled={disabled}
           onChange={this.onChange}
           {...props}
         />

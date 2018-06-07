@@ -67,3 +67,10 @@ storiesOf('Input', module)
       <Input />,
     ),
   )
+  .add('disabled',
+    withInfo({
+      ...infoProps,
+    })(() =>
+      <Input placeholder='My email' disabled />,
+    ),
+  )
