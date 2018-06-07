@@ -60,9 +60,11 @@ storiesOf('Button', module)
   )
   .add('with icon',
     withInfo({ ...infoProps })(() =>
-      <Button className='c-button--facebook' withIcon={true}>
-        <FacebookIcon />
-        <span>CONNECTED</span>
+      <Button
+        className='c-button--facebook'
+        Icon={<FacebookIcon />}
+      >
+        CONNECTED
       </Button>,
     ),
   )

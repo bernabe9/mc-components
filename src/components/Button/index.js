@@ -10,10 +10,10 @@ const Button = ({
   primary,
   secondary,
   tertiary,
-  withIcon,
   fullWidth,
   text,
   loading,
+  Icon,
   ...props
 }) => {
   const classNames = cn(
@@ -23,7 +23,7 @@ const Button = ({
       'c-button--primary': primary,
       'c-button--secondary': secondary,
       'c-button--tertiary': tertiary,
-      'c-button--with-icon': withIcon,
+      'c-button--with-icon': Boolean(Icon),
       'c-button--full-width': fullWidth,
       'c-button--text': text,
       'c-button--loading': loading,
@@ -36,6 +36,7 @@ const Button = ({
       onClick={onClick}
       {...props}
     >
+      {Boolean(Icon) && Icon}
       <span>
         {children}
       </span>
@@ -55,10 +56,10 @@ Button.propTypes = {
   primary: bool,
   secondary: bool,
   tertiary: bool,
-  withIcon: bool,
   fullWidth: bool,
   text: bool,
   loading: bool,
+  Icon: node,
 }
 
 Button.defaultProps = {
@@ -67,7 +68,6 @@ Button.defaultProps = {
   primary: false,
   secondary: false,
   tertiary: false,
-  withIcon: false,
   fullWidth: false,
   text: false,
   loading: false,
