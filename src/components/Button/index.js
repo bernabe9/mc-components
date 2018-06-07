@@ -1,7 +1,7 @@
 import React from 'react'
 import cn from 'classnames'
-
 import { string, func, bool, node, oneOfType, arrayOf } from 'prop-types'
+import ButtonLoader from '../ButtonLoader'
 
 const Button = ({
   children,
@@ -13,6 +13,7 @@ const Button = ({
   withIcon,
   fullWidth,
   text,
+  loading,
   ...props
 }) => {
   const classNames = cn(
@@ -25,6 +26,7 @@ const Button = ({
       'c-button--with-icon': withIcon,
       'c-button--full-width': fullWidth,
       'c-button--text': text,
+      'c-button--loading': loading,
     },
   )
 
@@ -34,7 +36,10 @@ const Button = ({
       onClick={onClick}
       {...props}
     >
-      {children}
+      <span>
+        {children}
+      </span>
+      {loading && <ButtonLoader />}
     </button>
   )
 }
@@ -53,6 +58,7 @@ Button.propTypes = {
   withIcon: bool,
   fullWidth: bool,
   text: bool,
+  loading: bool,
 }
 
 Button.defaultProps = {
@@ -64,6 +70,7 @@ Button.defaultProps = {
   withIcon: false,
   fullWidth: false,
   text: false,
+  loading: false,
 }
 
 export default Button
