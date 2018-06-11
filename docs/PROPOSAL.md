@@ -74,7 +74,7 @@ If we decide to go with SCSS, then we need to decide if we add the styles locall
   - External library could have components styles + other styles
   - Legacy styles
   
-  Another approach could be to use an external library and add missing styles locally. Once the local styles are stable we can move those styles to the external library
+Another approach could be to use an external library and add missing styles locally. Once the local styles are stable we can move those styles to the external library
 
 ## Development
 
