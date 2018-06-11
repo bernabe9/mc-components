@@ -83,7 +83,7 @@ If we decide to go with SCSS, then we need to decide if we add the styles locall
 - Doesn't depend on others non-reusable components
 
 ### Storybook
-If we implement awesome components but we dont have a great documentation no one is going to find them.
+If we implement awesome components but we don't have a great documentation no one is going to find them.
 
 Storybook is a tool to display the component in different contexts or stories.
 
@@ -111,7 +111,7 @@ Use **BEM methodology** to name the classes.
 Try to keep everything as modular as possible.
 
 ### Documentation
-Stroybook is a kind of documentation, but some component may need a more explained documentation with usage.
+Stroybook is a kind of documentation, but some component may need a more explained documentation.
 
 To add documentation to a component, inside it's folder create a README.md file.
 
