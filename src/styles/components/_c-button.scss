@@ -1,5 +1,5 @@
 .c-button {
-  display: flex;
+  display: inline-block;
   font-weight: $btn-font-weight;
   text-align: center;
   text-decoration: none;
@@ -40,6 +40,56 @@
     background-image: none;
     @include box-shadow($btn-active-box-shadow);
   }
+
+  &--wide {
+    min-width: 27.5rem;
+  }
+
+  &--with-icon {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+  
+    span {
+      margin-left: 1.3rem;
+    }
+  }
+
+  &--full-width {
+    width: 100%;
+  }
+  
+  &--text {
+    font-weight: 700;
+    font-size: 1.3rem;
+    letter-spacing: .15rem;
+    color: rgba($black, .5);
+    padding: 0;
+    background-color: transparent;
+  
+    &:hover {
+      color: rgba($black, .8);
+    }
+  }
+  
+  &--facebook {
+    @include button-variant($facebook-blue, $facebook-blue)
+  }
+  
+  &--loading {
+    position: relative;
+    pointer-events: none;
+  
+    span {
+      opacity: 0;
+    }
+  
+    .loader {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
 }
 
 // Future-proof disabling of clicks on `<a>` elements
@@ -57,54 +107,6 @@ fieldset:disabled a.btn {
 @each $color, $value in $theme-colors {
   .c-button--#{$color} {
     @include button-variant($value, $value);
-  }
-}
-
-.c-button--wide {
-  min-width: 27.5rem;
-}
-
-.c-button--with-icon {
-  @extend %flex-centered;
-
-  span {
-    margin-left: 1.3rem;
-  }
-}
-
-.c-button--full-width {
-  width: 100%;
-}
-
-.c-button--text {
-  font-weight: 700;
-  font-size: 1.3rem;
-  letter-spacing: .15rem;
-  color: rgba($black, .5);
-  padding: 0;
-  background-color: transparent;
-
-  &:hover {
-    color: rgba($black, .8);
-  }
-}
-
-.c-button--facebook {
-  @include button-variant($facebook-blue, $facebook-blue)
-}
-
-.c-button--loading {
-  position: relative;
-  pointer-events: none;
-
-  span {
-    opacity: 0;
-  }
-
-  .loader {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
   }
 }
 
