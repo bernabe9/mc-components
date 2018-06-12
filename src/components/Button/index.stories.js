@@ -38,21 +38,21 @@ storiesOf('Button', module)
       </Button>,
     ),
   )
-  .add('tertiary',
+  .add('link button',
     withInfo({ ...infoProps })(() =>
       <Button
         onClick={action('clicked')}
-        tertiary
+        link
       >
         Button
       </Button>,
     ),
   )
-  .add('text button',
+  .add('link muted',
     withInfo({ ...infoProps })(() =>
       <Button
         onClick={action('clicked')}
-        text
+        linkMuted
       >
         Button
       </Button>,

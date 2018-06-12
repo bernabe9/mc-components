@@ -9,7 +9,8 @@ const Button = ({
   onClick,
   primary,
   secondary,
-  tertiary,
+  link,
+  linkMuted,
   fullWidth,
   text,
   loading,
@@ -17,16 +18,16 @@ const Button = ({
   ...props
 }) => {
   const classNames = cn(
-    'c-button',
     { [className]: Boolean(className) },
     {
-      'c-button--primary': primary,
-      'c-button--secondary': secondary,
-      'c-button--tertiary': tertiary,
-      'c-button--with-icon': Boolean(Icon),
-      'c-button--full-width': fullWidth,
-      'c-button--text': text,
-      'c-button--loading': loading,
+      'mc-btn mc-btn--primary': primary,
+      'mc-btn mc-btn--secondary': secondary,
+      'mc-btn mc-btn--link': link,
+      'mc-btn mc-btn--link-muted': linkMuted,
+      'c-button c-button--with-icon': Boolean(Icon),
+      'c-button c-button--full-width': fullWidth,
+      'c-button c-button--text': text,
+      'c-button c-button--loading': loading,
     },
   )
 
