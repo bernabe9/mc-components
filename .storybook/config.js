@@ -2,7 +2,6 @@ import { configure, addDecorator } from '@storybook/react';
 
 import { backgrounds, StoryWrapper } from './decorators'
 import './styles.scss'
-import '../node_modules/@masterclass/mastersass/src/masterSass.scss'
 
 // load global decorators
 addDecorator(backgrounds)
