@@ -5,6 +5,7 @@
   "author": "Bernabe Gonzalez <gobernabe@gmail.com>",
   "homepage": "https://bernabe9.github.io/mc-components",
   "dependencies": {
+    "@masterclass/mastersass": "yankaindustries/mastersass",
     "classnames": "^2.2.5",
     "mc-sass-lib": "https://github.com/jesseocon/mc-sass-lib"
   },
